@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from './hoc/Layout/Layout'
-import EventList from './containers/EventList/EventList'
+// import classes from './App.scss'
+import EventList from './containers/Events/Events'
 
 function App() {
   return (
