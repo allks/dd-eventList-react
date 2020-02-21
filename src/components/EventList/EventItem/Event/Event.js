@@ -10,7 +10,7 @@ const Event = props => {
 
   return (
     <li className={cls.join(' ')}>
-      <h2>{props.comment.author}</h2>
+      <h3>{props.comment.author}</h3>
       <p>{props.comment.text}</p>
       <span>{props.comment.date}</span>
     </li>
