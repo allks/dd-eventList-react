@@ -28,6 +28,12 @@ class Events extends Component {
             author: 'Vivamus',
             text: 'Elit consequat proident tempor voluptate aliquip ut officia pariatur aute non officia in enim. Cupidatat aute veniam culpa Lorem qui adipisicing non velit tempor nulla mollit. Velit ex anim mollit labore. In cupidatat velit laborum ipsum veniam pariatur incididunt.',
             date: '02.10.2000'
+          },
+          {
+            id: '4',
+            author: 'Vivamus',
+            text: 'Elit consequat proident tempor voluptate aliquip ut officia pariatur aute non officia in enim. Cupidatat aute veniam culpa Lorem qui adipisicing non velit tempor nulla mollit. Velit ex anim mollit labore. In cupidatat velit laborum ipsum veniam pariatur incididunt.',
+            date: '02.10.2000'
           }
         ],
       },
@@ -103,6 +109,12 @@ class Events extends Component {
           },
           {
             id: '3',
+            author: 'Vivamus',
+            text: 'Elit consequat proident tempor voluptate aliquip ut officia pariatur aute non officia in enim. Cupidatat aute veniam culpa Lorem qui adipisicing non velit tempor nulla mollit. Velit ex anim mollit labore. In cupidatat velit laborum ipsum veniam pariatur incididunt.',
+            date: '02.10.2000'
+          },
+          {
+            id: '4',
             author: 'Vivamus',
             text: 'Elit consequat proident tempor voluptate aliquip ut officia pariatur aute non officia in enim. Cupidatat aute veniam culpa Lorem qui adipisicing non velit tempor nulla mollit. Velit ex anim mollit labore. In cupidatat velit laborum ipsum veniam pariatur incididunt.',
             date: '02.10.2000'

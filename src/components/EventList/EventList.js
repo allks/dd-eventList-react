@@ -7,7 +7,7 @@ const EventList = props => (
     <div className={classes.title}>{props.title}</div>
     <div className={classes.description}>{props.description}</div>
     <div className={classes.date}>{props.data}</div>
-    <div className={classes.comment}>Комментарии: 0</div>
+    <div className={classes.comment}>Комментарии: {props.comments.length}</div>
     <EventItem 
       comments={props.comments}
   />
