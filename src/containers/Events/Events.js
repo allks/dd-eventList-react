@@ -8,7 +8,7 @@ class Events extends Component {
       {
         id: 1,
         title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        description: 'Tristique nulla aliquet enim tortor at auctor. Amet consectetur adipiscing elit ut aliquam purus sit amet.',
+        description: 'Tristique nulla aliquet enim tortor at auctor. Amet consectetur adipiscing elit ut aliquam purus sit amet. Volutpat sed cras ornare arcu dui vivamus arcu. Sapien eget.',
         data: '12.12.2321',
         comments: [
           {

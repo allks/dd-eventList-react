@@ -2,3 +2,12 @@
   list-style: none;
   padding: 0;
 }
+
+.eventItem > li {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #000;
+  padding: 20px;
+  margin: 30px 0;
+}

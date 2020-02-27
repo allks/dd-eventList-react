@@ -10,9 +10,13 @@ const Event = props => {
 
   return (
     <li className={cls.join(' ')}>
-      <h3>{props.comment.author}</h3>
+      <h3>
+        <img src="" alt="" width="38" height="38"/>
+        {props.comment.author}
+      </h3>
       <p>{props.comment.text}</p>
       <span>{props.comment.date}</span>
+      <button>Удалить</button>
     </li>
   )
 }
