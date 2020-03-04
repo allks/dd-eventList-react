@@ -14,6 +14,7 @@ export default class EventDetail extends React.Component {
       <div className={classes.eventDetail}>
         <button onClick={this.goToBack}>go to back</button>
         <h3>{this.props.match.params.index}</h3>
+        <p></p>
       </div>
     )
   }
