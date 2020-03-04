@@ -1,4 +1,5 @@
 import React from 'react'
+import classes from './EventDetail.scss'
 
 export default class EventDetail extends React.Component {
 
@@ -10,7 +11,7 @@ export default class EventDetail extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={classes.eventDetail}>
         <button onClick={this.goToBack}>go to back</button>
         <h3>{this.props.match.params.index}</h3>
       </div>

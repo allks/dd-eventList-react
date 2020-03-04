@@ -8,10 +8,11 @@ const Event = props => {
       className={classes.event}
       onClick={() => props.history.push('/event/' + props.index)}
     >
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-      <span>Дата публикации:{props.data}</span>
-      <span>Комментарии:{props.comments.length}</span>
+      <h2 className={classes.title}>{props.title}</h2>
+      <p className={classes.description}>{props.description}</p>
+      <span className={classes.data}>Дата публикации: {props.data}</span>
+      <span className={classes.comments}>Комментарии: {props.comments.length}</span>
+      <button className={classes.remove}>Удалить</button>
     </li>
   )
 }

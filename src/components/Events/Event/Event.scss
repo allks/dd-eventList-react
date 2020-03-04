@@ -1,6 +1,45 @@
 .event {
+  position: relative;
+  width: 100%;
   min-height: 242px;
   margin-bottom: 40px;
+  padding: 20px;
   box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
   border-radius: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.description {
+  margin: 30px 0;
+}
+
+.data {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #ccc;
+}
+
+.comments {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: #ccc;
+}
+
+.remove {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: none;
+  color: #FF2F2F;
+  background-color: transparent;
+  &:hover {
+    opacity: .6;
+    cursor: pointer;
+  }
 }
