@@ -2,3 +2,18 @@
   width: 100%;
   box-shadow: 0px 4px 18px 0px rgba(0,0,0,0.28);
 }
+
+.navList {
+  width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+}
+
+.navItem {
+  padding: 18px 20px;
+}
+
+.navItem:hover {
+  background-color: #F0EEEE;
+}

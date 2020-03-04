@@ -1,0 +1,42 @@
+.maincontent {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.events {
+  list-style: none;
+}
+
+.btnSelections {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 285px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  margin: 40px 0;
+  cursor: pointer;
+}
+
+.addEvent {
+  background-color: #19D94F;
+  color: #fff;
+}
+
+.sort {
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+.addEvent:hover {
+  background-color: darken(#19D94F, 10%);
+}
+
+.sort:hover {
+  background-color: #ccc;
+  border: none;
+}

@@ -4,13 +4,15 @@ import {withRouter} from 'react-router-dom'
 
 const Event = props => {
   return (
-    <div
+    <li
       className={classes.event}
       onClick={() => props.history.push('/event/' + props.index)}
     >
-      <h3>{props.title}</h3>
+      <h2>{props.title}</h2>
       <p>{props.description}</p>
-    </div>
+      <span>Дата публикации:{props.data}</span>
+      <span>Комментарии:{props.comments.length}</span>
+    </li>
   )
 }
 

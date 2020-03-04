@@ -126,17 +126,26 @@ export default class Events extends Component {
 
   render() {
     return (
-      <div className={classes.events}>
-        {this.state.events.map((event, index) => {
-          return (
-            <Event
-              index={index}
-              title={event.title}
-              description={event.description}
-            />
-          )
-        })}
+      <div className={classes.maincontent}>
+        <div className={classes.btnSelections}>
+          <button className={classes.addEvent}>Добавить событие</button>
+          <button className={classes.sort}>Сортировать</button>
+        </div>
+        <ul className={classes.events}>
+          {this.state.events.map((event, index) => {
+            return (
+              <Event
+                index={index}
+                title={event.title}
+                description={event.description}
+                data={event.data}
+                comments={event.comments}
+              />
+            )
+          })}
+        </ul>
       </div>
+
     )
   }
 }
