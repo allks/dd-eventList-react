@@ -1,20 +1,18 @@
 import React, {Component} from 'react'
 import classes from './Layout.scss'
+import {Route, Switch, Redirect} from 'react-router-dom'
+import Events from '../../components/Events/Events'
+import EventDetail from '../../components/EventDetail/EventDetail'
 
 class Layout extends Component {
   render() {
     return (
       <div className={classes.layout}>
-        <nav className={classes.nav}>
-          <ul className={classes.navList}>
-            <li className={classes.navItem}>Прошедшие</li>
-            <li className={classes.navItem}>Текущие</li>
-            <li className={classes.navItem}>Близжайшие</li>
-          </ul>
-        </nav>
-        <main className={classes.main}>
-          {this.props.children}
-        </main>
+        <Switch>
+          <Route path="/event/:index" component={EventDetail} />
+          <Route path="/" component={Events} />
+          <Redirect to={'/'} />
+        </Switch>
       </div>
     )
   }

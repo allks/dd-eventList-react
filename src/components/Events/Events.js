@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import classes from './Events.scss'
-import EventItem from '../../components/EventList/EventList'
+import Event from './Event/Event'
 
-class Events extends Component {
+export default class Events extends Component {
   state = {
     events: [
       {
@@ -125,17 +125,18 @@ class Events extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className={classes.events}>
-        <EventItem
-          title={this.state.events[0].title}
-          description={this.state.events[0].description}
-          data={this.state.events[0].data}
-          comments={this.state.events[0].comments}
-        />
+        {this.state.events.map((event, index) => {
+          return (
+            <Event
+              index={index}
+              title={event.title}
+              description={event.description}
+            />
+          )
+        })}
       </div>
     )
   }
 }
-
-export default Events
