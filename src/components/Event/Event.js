@@ -5,7 +5,7 @@ import {withRouter} from 'react-router-dom'
 const Event = props => {
   return (
     <li
-      className={classes.event}
+      className={classes.item}
       onClick={() => props.history.push('/event/' + props.index)}
     >
       <h2 className={classes.title}>{props.title}</h2>

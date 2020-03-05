@@ -5,11 +5,11 @@ export default class Nav extends React.Component {
 
   render() {
     return (
-      <nav className={classes.nav}>
-        <ul className={classes.navList}>
-          <li className={classes.navItem}>Прошедшие</li>
-          <li className={classes.navItem}>Текущие</li>
-          <li className={classes.navItem}>Близжайшие</li>
+      <nav className={classes.wrap}>
+        <ul className={classes.list}>
+          <li className={classes.item}>Прошедшие</li>
+          <li className={classes.item}>Текущие</li>
+          <li className={classes.item}>Близжайшие</li>
         </ul>
       </nav>
     )

@@ -131,10 +131,11 @@ export default class Events extends Component {
           <button className={classes.addEvent}>Добавить событие</button>
           <button className={classes.sort}>Сортировать</button>
         </div>
-        <ul className={classes.events}>
+        <ul className={classes.list}>
           {this.state.events.map((event, index) => {
             return (
               <Event
+                key={index}
                 index={index}
                 title={event.title}
                 description={event.description}
