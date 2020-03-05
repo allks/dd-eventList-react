@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import classes from './Events.scss'
-import Event from './Event/Event'
+import Event from '../../components/Event/Event'
 
 export default class Events extends Component {
   state = {
