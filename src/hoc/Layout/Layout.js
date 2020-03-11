@@ -4,6 +4,8 @@ import {Route, Switch, Redirect} from 'react-router-dom'
 import Nav from '../../components/Nav/Nav'
 import Events from '../../containers/Events/Events'
 import EventDetail from '../../components/EventDetail/EventDetail'
+import AddEvent from '../../components/AddEvent/AddEvent'
+
 
 class Layout extends Component {
   render() {
@@ -12,6 +14,7 @@ class Layout extends Component {
         <Nav />
         <Switch>
           <Route path="/event/:index" component={EventDetail} />
+          <Route path="/add-event" component={AddEvent} />
           <Route path="/" component={Events} />
           <Redirect to={'/'} />
         </Switch>

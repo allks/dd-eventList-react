@@ -123,12 +123,21 @@ export default class Events extends Component {
       },
     ]
   }
+  
+  goToAdd = () => {
+    this.props.history.push({
+      pathname: '/add-event'
+    })
+  }
 
   render() {
     return (
       <div className={classes.maincontent}>
         <div className={classes.btnSelections}>
-          <button className={classes.addEvent}>Добавить событие</button>
+          <button
+            className={classes.addEvent}
+            onClick={this.goToAdd} 
+          >Добавить событие</button>
           <button className={classes.sort}>Сортировать</button>
         </div>
         <ul className={classes.list}>
