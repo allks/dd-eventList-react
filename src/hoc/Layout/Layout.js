@@ -12,12 +12,14 @@ class Layout extends Component {
     return (
       <div className={classes.layout}>
         <Nav />
-        <Switch>
-          <Route path="/event/:index" component={EventDetail} />
-          <Route path="/add-event" component={AddEvent} />
-          <Route path="/" component={Events} />
-          <Redirect to={'/'} />
-        </Switch>
+        <div className={classes.maincontent}>
+          <Switch>
+            <Route path="/event/:index" component={EventDetail} />
+            <Route path="/add-event" component={AddEvent} />
+            <Route path="/" component={Events} />
+            <Redirect to={'/'} />
+          </Switch>
+        </div>
       </div>
     )
   }
