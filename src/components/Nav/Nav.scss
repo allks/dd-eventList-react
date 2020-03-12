@@ -1,24 +1,28 @@
-.wrap {
+.nav {
+  position: fixed;
+  overflow: hidden;
   width: 100%;
   box-shadow: 0px 4px 18px 0px rgba(0,0,0,0.28);
-  background-color: #274b69;
+  background-color: #3f4d63;
+  z-index: 9999;
 }
 
-.nav {
+.wrap {
   display: flex;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 1200px;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .list {
-  width: 1200px;
-  margin: 0 auto;
   list-style: none;
   display: flex;
+  margin-right: auto;
 }
 
 .item {
   padding: 18px 20px;
-  color: #ccc;
+  color: #fff;
 }
 
 .item:hover {

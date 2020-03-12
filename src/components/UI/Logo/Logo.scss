@@ -1,0 +1,13 @@
+.logo {
+  display: inline-block;
+  cursor: pointer;
+  &:hover path {
+    fill: #85a1c1;
+  }
+  & svg {
+    padding-right: 20px;
+  }
+  & path {
+    fill: #fff;
+  } 
+}

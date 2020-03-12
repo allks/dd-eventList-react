@@ -1,0 +1,23 @@
+.aside {
+  right: 0;
+  max-width: 300px;
+  margin-top: 25px;
+  margin-left: 25px;
+  background-color: #eef0f6;
+  border-radius: 10px;
+  align-self: flex-start;
+}
+
+.subTitle {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.list {
+  padding: 25px;
+  & li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #85a1c1;
+  }
+}

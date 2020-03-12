@@ -1,0 +1,17 @@
+.search {
+  width: 160px;
+  height: 28px;
+  border: 1px solid #fff;
+  border-radius: 14px;
+  background-color: transparent;
+  background-image: url('../../../assets/img/search.png');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  padding: 0 10px 0 30px;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+  &:focus {
+    width: 260px;
+  }
+}

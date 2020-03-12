@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import classes from './Events.scss'
 import Event from '../../components/Event/Event'
+import Categories from '../../components/Categories/Categories'
 
 export default class Events extends Component {
   state = {
@@ -132,30 +133,32 @@ export default class Events extends Component {
 
   render() {
     return (
-      <div className={classes.maincontent}>
-        <div className={classes.btnSelections}>
-          <button
-            className={classes.addEvent}
-            onClick={this.goToAdd} 
-          >Добавить событие</button>
-          <button className={classes.sort}>Сортировать</button>
+      <React.Fragment>
+        <div className={classes.main}>
+          <div className={classes.btnSelections}>
+            <button
+              className={classes.addEvent}
+              onClick={this.goToAdd} 
+            >Добавить событие</button>
+            <button className={classes.sort}>Сортировать</button>
+          </div>
+          <ul className={classes.list}>
+            {this.state.events.map((event, index) => {
+              return (
+                <Event
+                  key={index}
+                  index={index}
+                  title={event.title}
+                  description={event.description}
+                  data={event.data}
+                  comments={event.comments}
+                />
+              )
+            })}
+          </ul>
         </div>
-        <ul className={classes.list}>
-          {this.state.events.map((event, index) => {
-            return (
-              <Event
-                key={index}
-                index={index}
-                title={event.title}
-                description={event.description}
-                data={event.data}
-                comments={event.comments}
-              />
-            )
-          })}
-        </ul>
-      </div>
-
+        <Categories />
+      </React.Fragment>
     )
   }
 }
