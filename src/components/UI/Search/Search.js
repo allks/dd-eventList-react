@@ -3,12 +3,11 @@ import classes from './Search.scss'
 
 const Search = () => {
   return (
-    <div className={classes.wrap}>
       <input
         className={classes.search}
         type="text"
+        placeholder="Поиск"
       />
-    </div>
   )
 }
 

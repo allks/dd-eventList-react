@@ -1,5 +1,49 @@
+.create {
+  width: 100%;
+  padding: 0 100px;
+}
+
 .wrap {
   display: flex;
   flex-direction: column;
-  margin: 40px 0;
+  margin-top: 25px;
+}
+
+label {
+  font-size: 22px;
+}
+
+input,
+textarea {
+  margin: 5px 0 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+input {
+  height: 28px;
+}
+
+input[type="date"] {
+  width: 110px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.btnCreate {
+  width: 245px;
+  height: 38px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  margin: 25px auto;
+  cursor: pointer;
+  background-color: #85a1c1;
+  color: #fff;
+  &:hover {
+    background-color: darken($color: #85a1c1, $amount: 10%);
+  }
 }

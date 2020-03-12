@@ -12,7 +12,7 @@ export default class AddEvent extends React.Component {
   
     render() {
       return (
-        <React.Fragment>
+        <div className={classes.create}>
           <button onClick={this.goToBack}>go to back</button>
           <Title>Создание мероприятия</Title>
           <form className={classes.wrap}>
@@ -22,9 +22,14 @@ export default class AddEvent extends React.Component {
               id="title"
               placeholder="Placeholder..."
             />
-            <label for="description">Описание:</label>
-            <input 
+            <label for="category">Категория:</label>
+            <input
               type="text"
+              id="category"
+              placeholder="Placeholder..."
+            />
+            <label for="description">Описание:</label>
+            <textarea
               id="description"
               placeholder="Placeholder..."
             />
@@ -33,9 +38,12 @@ export default class AddEvent extends React.Component {
               type="date"
               id="date"
             />
-            <button type="button">Создать</button>
+            <button
+              type="button"
+              className={classes.btnCreate}
+            >Создать</button>
           </form>
-        </React.Fragment>
+        </div>
       )
     }
   }
