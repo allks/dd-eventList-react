@@ -1,13 +1,21 @@
-import React from 'react'
+import React, {Component} from 'react'
 import classes from './AddEvent.scss'
 import Title from '../../components/UI/Title/Title'
 
-export default class AddEvent extends React.Component {
+export default class AddEvent extends Component {
 
     goToBack = () => {
       this.props.history.push({
         pathname: '/'
       })
+    }
+
+    submitHandler = event => {
+      event.preventDefault()
+    }
+
+    createEventHandler = () => {
+
     }
   
     render() {
@@ -15,7 +23,10 @@ export default class AddEvent extends React.Component {
         <div className={classes.create}>
           <button onClick={this.goToBack}>go to back</button>
           <Title>Создание мероприятия</Title>
-          <form className={classes.wrap}>
+          <form
+            onSubmit={this.submitHandler}
+            className={classes.wrap}
+          >
             <label for="title">Заголовок:</label>
             <input
               type="text"
@@ -39,6 +50,7 @@ export default class AddEvent extends React.Component {
               id="date"
             />
             <button
+              onClick={this.createEventHandler}
               type="button"
               className={classes.btnCreate}
             >Создать</button>
