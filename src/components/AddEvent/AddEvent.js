@@ -4,6 +4,16 @@ import Title from '../../components/UI/Title/Title'
 
 export default class AddEvent extends Component {
 
+  state = {
+    events: [],
+    formControls: {
+      title: '',
+      category: '',
+      description: '',
+      date: ''
+    }
+  }
+
     goToBack = () => {
       this.props.history.push({
         pathname: '/'
