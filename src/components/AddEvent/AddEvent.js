@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import classes from './AddEvent.scss'
 import Title from '../../components/UI/Title/Title'
+import Axios from 'axios';
 
 export default class AddEvent extends Component {
   constructor(props) {
@@ -40,9 +41,13 @@ export default class AddEvent extends Component {
       this.setState({date: event.target.value});
     }
 
-    submitEventHandler = event => {
+    submitEventHandler = async event => {
       event.preventDefault();
-      console.log(this.state);
+      try {
+        await Axios.post('https://event-react-1bb48.firebaseio.com/events.json', this.state)
+      } catch (e) {
+        console.log(e)
+      }
     }
   
     render() {

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import classes from './Events.scss'
 import Event from '../../components/Event/Event'
 import Categories from '../../components/Categories/Categories'
+import Axios from 'axios'
 
 export default class Events extends Component {
   state = {
@@ -131,6 +132,25 @@ export default class Events extends Component {
     })
   }
 
+  async componentDidMount() {
+    try {
+      const response = await Axios.get('https://event-react-1bb48.firebaseio.com/events.json')
+      console.log(response.data)
+      const events = []
+      Object.keys(response.data).forEach((key, index) => {
+        events.push({
+          id: key,
+          index: index
+        })
+      })
+      this.setState({
+        events
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -151,7 +171,7 @@ export default class Events extends Component {
                   title={event.title}
                   description={event.description}
                   data={event.data}
-                  comments={event.comments}
+                  // comments={event.comments}
                 />
               )
             })}
