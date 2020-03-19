@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import classes from './Events.scss'
 import Event from '../../components/Event/Event'
 import Categories from '../../components/Categories/Categories'
+import Loader from '../../components/UI/Loader/Loader'
 import Axios from 'axios'
 
 // const config = {
@@ -15,6 +16,7 @@ import Axios from 'axios'
 
 export default class Events extends Component {
   state = {
+    loading: true,
     events: [
       // {
       //   id: 1,
@@ -128,7 +130,8 @@ export default class Events extends Component {
         })
       }
       this.setState({
-        events
+        events,
+        loading: false
       })
       console.log(events)
     } catch (e) {
@@ -140,42 +143,49 @@ export default class Events extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className={classes.main}>
-          <div className={classes.btnSelections}>
-            <button
-              className={classes.addEvent}
-              onClick={this.goToAdd} 
-            >Добавить событие</button>
-            <button className={classes.sort}>Сортировать</button>
-          </div>
-          <ul className={classes.list}>
-            {this.state.events.map((event, index) => {
-              return (
-                <Event
-                  key={index}
-                  index={index}
-                  title={event.title}
-                  description={event.description}
-                  date={event.date}
-                  comments={event.comments}
-                />
-              )
-            })}
-          </ul>
-        </div>
-        <div className={classes.aside}>
-          <h2 className={classes.subTitle}>Категории</h2>
-          <ul className={classes.CatList}>
-            {this.state.events.map((event, key) => {
-              return (
-                <Categories
-                  key={key}
-                  category={event.category}
-                />
-              )
-            })}
-          </ul>
-        </div>
+        {
+          this.state.loading
+          ? <Loader />
+          : <React.Fragment>
+            <div className={classes.main}>
+              <div className={classes.btnSelections}>
+                <button
+                  className={classes.addEvent}
+                  onClick={this.goToAdd} 
+                >Добавить событие</button>
+                <button className={classes.sort}>Сортировать</button>
+              </div>
+              <ul className={classes.list}>
+                {this.state.events.map((event, index) => {
+                  return (
+                    <Event
+                      key={index}
+                      index={index}
+                      title={event.title}
+                      description={event.description}
+                      date={event.date}
+                      comments={event.comments}
+                    />
+                  )
+                })}
+              </ul>
+            </div>
+            <div className={classes.aside}>
+              <h2 className={classes.subTitle}>Категории</h2>
+              <ul className={classes.CatList}>
+                {this.state.events.map((event, key) => {
+                  return (
+                    <Categories
+                      key={key}
+                      category={event.category}
+                    />
+                  )
+                })}
+              </ul>
+            </div>
+      </React.Fragment>
+        }
+
       </React.Fragment>
     )
   }
