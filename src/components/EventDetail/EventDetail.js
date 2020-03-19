@@ -8,8 +8,9 @@ export default class EventDetail extends React.Component {
       pathname: '/'
     })
   }
+  
 
-  render() {
+  render() { 
     return (
       <div className={classes.wrap}>
         <button onClick={this.goToBack}>go to back</button>
@@ -17,5 +18,5 @@ export default class EventDetail extends React.Component {
         <p></p>
       </div>
     )
-  }
+  } 
 }

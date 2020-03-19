@@ -6,7 +6,7 @@ const Event = props => {
   return (
     <li
       className={classes.item}
-      onClick={() => props.history.push('/event/' + props.id)}
+      onClick={() => props.history.push('/event/' + props.index)}
     >
       <h2 className={classes.title}>{props.title}</h2>
       <p className={classes.description}>{props.description}</p>
