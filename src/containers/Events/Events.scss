@@ -35,3 +35,29 @@
     background-color: darken(#cfdaec, 10%);
   }
 }
+
+.aside {
+  right: 0;
+  width: 300px;
+  min-height: 500px;
+  margin-top: 25px;
+  margin-left: 25px;
+  background-color: #eef0f6;
+  border-radius: 10px;
+  align-self: flex-start;
+}
+
+.subTitle {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.CatList {
+  padding: 25px;
+  padding-top: 0;
+  & li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #85a1c1;
+  }
+}
