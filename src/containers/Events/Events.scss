@@ -9,6 +9,7 @@
 .btnSelections {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   & button {
     width: 245px;
     height: 38px;
@@ -29,10 +30,19 @@
 }
 
 .sort {
+  padding: 10px 40px;
   background-color: #cfdaec;
   color: #094d74;
-  &:hover {
-    background-color: darken(#cfdaec, 10%);
+  font-size: 18px;
+  border-radius: 30px;
+  & > select {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    color: #094d74;
+  }
+  & option {
+    width: 50px;
   }
 }
 

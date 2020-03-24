@@ -62,7 +62,12 @@ export default class Events extends Component {
                   className={classes.addEvent}
                   onClick={this.goToAdd} 
                 >Добавить событие</button>
-                <button className={classes.sort}>Сортировать</button>
+                <label className={classes.sort}> Сортировать по:
+                  <select>
+                    <option>дате</option>
+                    <option>имени</option>
+                  </select>
+                </label>
               </div>
               <ul className={classes.list}>
                 {this.state.events.map((event, index) => {
