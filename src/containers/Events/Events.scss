@@ -1,5 +1,5 @@
 .main {
-  width: 900px;
+  width: 980px;
 }
 
 .list {
@@ -30,7 +30,7 @@
 }
 
 .sort {
-  padding: 10px 40px;
+  padding: 8px 18px;
   background-color: #cfdaec;
   color: #094d74;
   font-size: 18px;
@@ -38,17 +38,14 @@
   & > select {
     border: none;
     background-color: transparent;
-    font-size: 18px;
+    font-size: 16px;
     color: #094d74;
-  }
-  & option {
-    width: 50px;
   }
 }
 
 .aside {
   right: 0;
-  width: 300px;
+  width: 250px;
   min-height: 500px;
   margin-top: 25px;
   margin-left: 25px;
