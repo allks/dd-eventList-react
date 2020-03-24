@@ -45,6 +45,12 @@ export default class AddEvent extends Component {
       event.preventDefault();
       try {
         await Axios.post('https://event-react-1bb48.firebaseio.com/events.json', this.state)
+        this.setState({
+          title: '',
+          category: '',
+          description: '',
+          date: ''
+        })
       } catch (e) {
         console.log(e)
       }
@@ -53,7 +59,12 @@ export default class AddEvent extends Component {
     render() {
       return (
         <div className={classes.create}>
-          <button onClick={this.goToBack}>go to back</button>
+        <button
+          className={classes.toBack}
+          onClick={this.goToBack}
+        >
+          Назад
+        </button>
           <Title>Создание мероприятия</Title>
           <form
             onSubmit={this.submitHandler}

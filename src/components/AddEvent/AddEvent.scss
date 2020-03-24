@@ -21,6 +21,8 @@ textarea {
   padding: 10px;
 }
 
+
+
 input {
   height: 28px;
 }
@@ -31,6 +33,7 @@ input[type="date"] {
 
 textarea {
   min-height: 100px;
+  resize: none;
 }
 
 .btnCreate {
@@ -45,5 +48,47 @@ textarea {
   color: #fff;
   &:hover {
     background-color: darken($color: #85a1c1, $amount: 10%);
+  }
+}
+
+.toBack {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  margin: 20px 0;
+  padding-left: 35px;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    vertical-align: middle;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 3px;
+    transform: rotate(-135deg);
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+  }
+  &:hover,
+  &:hover::before,
+  &:hover::after {
+    color: #3d3d3d;
+    border-color: #3d3d3d;
   }
 }

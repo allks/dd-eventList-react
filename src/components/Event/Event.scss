@@ -1,4 +1,6 @@
 .item {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   min-height: 242px;
@@ -17,30 +19,24 @@
 .title {
   font-size: 24px;
   font-weight: 700;
+  padding-right: 60px;
 }
 
 .description {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
-.data {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  color: #ccc;
-}
-
-.comments {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
   color: #ccc;
 }
 
 .remove {
   position: absolute;
   top: 30px;
-  right: 30px;
+  right: 15px;
   border: none;
   color: #FF2F2F;
   background-color: transparent;
